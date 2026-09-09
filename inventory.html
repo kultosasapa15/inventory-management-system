@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory - Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadInventory()">
+
+    <div class="sidebar">
+
+        <h2>Inventory System</h2>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="store.html">Store Information</a>
+
+        <button class="logout-button" onclick="logout()">Logout</button>
+
+    </div>
+
+
+    <div class="main-content">
+
+        <h1>Inventory Management</h1>
+
+
+        <!-- Add Product -->
+
+        <div class="form-box">
+
+            <h2 id="formTitle">Add Product</h2>
+
+            <input type="text" id="productName" placeholder="Product Name">
+
+            <input type="number" id="productQuantity" placeholder="Quantity">
+
+            <input type="number" id="productPrice" placeholder="Price">
+
+            <button onclick="saveProduct()">Save Product</button>
+
+            <button class="cancel-button"
+                    id="cancelButton"
+                    onclick="cancelEdit()"
+                    style="display:none;">
+                Cancel
+            </button>
+
+            <p id="inventoryMessage"></p>
+
+        </div>
+
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchProduct"
+                placeholder="Search product..."
+                onkeyup="displayInventory()"
+            >
+
+        </div>
+
+
+        <!-- Inventory Table -->
+
+        <div class="table-box">
+
+            <h2>Product List</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="inventoryTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
