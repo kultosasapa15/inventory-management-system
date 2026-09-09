@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store Information - Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadStoreInfo()">
+
+    <div class="sidebar">
+
+        <h2>Inventory System</h2>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="store.html">Store Information</a>
+
+        <button class="logout-button" onclick="logout()">Logout</button>
+
+    </div>
+
+
+    <div class="main-content">
+
+        <h1>Store Information</h1>
+
+        <div class="form-box store-form">
+
+            <label>Store Name</label>
+            <input type="text" id="storeName">
+
+            <label>Store ID</label>
+            <input type="text" id="storeID">
+
+            <label>Owner Name</label>
+            <input type="text" id="ownerName">
+
+            <label>Address</label>
+            <input type="text" id="storeAddress">
+
+            <label>Contact Number</label>
+            <input type="text" id="storeContact">
+
+            <button onclick="saveStoreInfo()">
+                Save Store Information
+            </button>
+
+            <p id="storeMessage"></p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
