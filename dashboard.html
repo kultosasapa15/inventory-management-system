@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadDashboard()">
+
+    <div class="sidebar">
+
+        <h2>Inventory System</h2>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="store.html">Store Information</a>
+
+        <button class="logout-button" onclick="logout()">Logout</button>
+
+    </div>
+
+
+    <div class="main-content">
+
+        <h1>Dashboard</h1>
+
+        <p>Welcome to your inventory management system.</p>
+
+
+        <div class="dashboard-cards">
+
+            <div class="card">
+                <h3>Total Products</h3>
+                <p id="totalProducts">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Stock</h3>
+                <p id="totalStock">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Low Stock</h3>
+                <p id="lowStock">0</p>
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-section">
+
+            <h2>Quick Actions</h2>
+
+            <a class="action-button" href="inventory.html">
+                Manage Inventory
+            </a>
+
+            <a class="action-button" href="store.html">
+                View Store Information
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
